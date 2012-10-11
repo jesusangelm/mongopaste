@@ -1,0 +1,16 @@
+production:
+  sessions:
+    default:
+      database: prod_mongopaste
+      username: user
+      password: pass
+      hosts:
+        - server.mongohq.com:27017
+
+development:
+  sessions:
+    default:
+      database: dev_mongopaste
+      hosts:
+        - localhost:27017
+

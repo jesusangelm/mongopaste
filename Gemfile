@@ -1,0 +1,9 @@
+source :rubygems
+gem "sinatra"
+gem "mongoid"
+gem "bson_ext"
+gem "thin"
+gem "builder"
+gem "rack-flash3"
+gem "sinatra-redirect-with-flash"
+gem "coderay"
