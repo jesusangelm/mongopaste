@@ -26,10 +26,6 @@ get "/" do
   erb :index
 end
 
-#get "/favicon.ico" do
-#  redirect "/"
-#end
-
 #Create Action
 post "/" do
   s = Snippet.new

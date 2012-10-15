@@ -6,6 +6,9 @@ production:
       password: pass
       hosts:
         - server.mongohq.com:27017
+  options:
+    raise_not_found_error: false
+
 
 development:
   sessions:
@@ -13,4 +16,6 @@ development:
       database: dev_mongopaste
       hosts:
         - localhost:27017
+  options:
+    raise_not_found_error: false
 

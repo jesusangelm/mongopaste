@@ -1,10 +1,7 @@
 require "mongoid"
 
-if ENV["VCAP_SERVICES"]
-  Mongoid.load!(File.expand_path("../mongoid.yml", __FILE__), :production)
-else
-  Mongoid.load!(File.expand_path("../mongoid.yml", __FILE__), :development)
-end
+env = ENV['VCAP_SERVICES'] ? :production : :development
+Mongoid.load!(File.expand_path("../mongoid.yml", __FILE__), env)
 
 class Snippet
   include Mongoid::Document
@@ -12,4 +9,6 @@ class Snippet
   field :title, type: String
   field :language, type: String
   field :code, type: String
+
+  validates_presence_of :title, :code, :language
 end
